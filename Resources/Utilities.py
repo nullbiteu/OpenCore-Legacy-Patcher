@@ -33,10 +33,23 @@ def check_recovery():
 
 
 def cls():
-    if check_recovery() == False:
-         os.system('cls' if os.name == 'nt' else 'clear')
+    if not check_recovery():
+        os.system("cls" if os.name == "nt" else "clear")
     else:
         print("\u001Bc")
+
+
+def get_nvram(variable: str, uuid: str = None, *, decode: bool = False):
+    if uuid:
+        uuid += ":"
+    result = subprocess.run(f"nvram -x {uuid}{variable}".split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE).stdout.strip()
+    if result:
+        value = plistlib.loads(result)[f"{uuid}{variable}"]
+        if decode:
+            value = value.strip(b"\0").decode()
+        return value
+    return None
+
 
 # def menu(title, prompt, menu_options, add_quit=True, auto_number=False, in_between=[], top_level=False):
 #     return_option = ["Q", "Quit", None] if top_level else ["B", "Back", None]
