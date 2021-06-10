@@ -67,7 +67,7 @@ To aid users in troubleshooting, we've compiled a list of users who've reported 
 | Macmini3,1 | No reports | N/A | N/A |
 | Macmini4,1 | ^^ | ^^ | ^^ |
 | Macmini5,1 | ^^ | ^^ | ^^ |
-| Macmini5,2 | ^^ | ^^ | ^^ |
+| Macmini5,2 | <span style="color:#30BCD5"> YES </span> | nullbit | - Stock model elevated 16GB RAM + change to SSD <br/>- Patcher version 0.0.21 |
 | Macmini5,3 | ^^ | ^^ | ^^ |
 | Macmini6,1 | <span style="color:#30BCD5"> YES </span> | cicofz | - Stock model <br/>- Patcher version 0.0.21 |
 | ^^ | ^^ | Stig124 | - Stock model <br/>- Patcher version 0.0.19 |
